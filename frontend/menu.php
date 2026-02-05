@@ -13,78 +13,9 @@ include '../backend/koneksi.php';
     <title>Menu Sehat - MBG App</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { 
-            --primary: #4A5D23; 
-            --primary-soft: #E8F0E5;
-            --bg: #FDFDFD; 
-            --text: #232931; 
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background: var(--bg); color: var(--text); padding-bottom: 50px; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
-
-        /* HEADER */
-        .page-header { padding: 60px 0 40px; }
-        .page-header h2 { font-size: 36px; font-weight: 800; letter-spacing: -1px; color: var(--primary); }
-        .page-header p { color: #64748B; font-weight: 600; margin-top: 5px; }
-
-        /* GRID */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-            gap: 30px; 
-        }
-
-        /* CARD APPLE STYLE */
-        .card { 
-            background: white; 
-            border-radius: 45px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
-            border: 1px solid #F0F4F2; 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            cursor: pointer;
-            position: relative;
-        }
-
-        .card:hover { 
-            transform: translateY(-12px); 
-            box-shadow: 0 25px 50px rgba(74, 93, 35, 0.12); 
-        }
-
-        .img-wrapper { position: relative; width: 100%; height: 260px; overflow: hidden; background: #f0f0f0; }
-        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .card:hover img { transform: scale(1.1); }
-
-        .badge-date {
-            position: absolute; top: 20px; right: 20px;
-            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
-            padding: 8px 16px; border-radius: 50px;
-            font-size: 11px; font-weight: 800; color: var(--primary);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .card-body { padding: 30px; }
-        .category { 
-            display: inline-block; background: var(--primary-soft); 
-            color: var(--primary); padding: 5px 12px; border-radius: 10px;
-            font-size: 10px; font-weight: 800; text-transform: uppercase; margin-bottom: 15px;
-        }
-
-        .card-body h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; color: #1e293b; }
-        
-        .nutrition-info { display: flex; gap: 15px; margin-top: 20px; padding-top: 20px; border-top: 1px dashed #eee; }
-        .nut-item { font-size: 12px; color: #64748B; font-weight: 700; display: flex; align-items: center; gap: 5px; }
-        .nut-item i { color: var(--primary); }
-
-        .empty-state { text-align: center; padding: 100px 0; grid-column: 1 / -1; }
-        .empty-state i { font-size: 60px; color: #cbd5e1; margin-bottom: 20px; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-menu">
 
     <?php include 'navbar.php'; ?>
 

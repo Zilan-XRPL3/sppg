@@ -9,54 +9,9 @@ include '../backend/koneksi.php';
     <title>Riwayat Menu - MBG</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { --primary: #4A5D23; --bg: #F8FAF7; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background: var(--bg); }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        
-        /* List Item Styling */
-        .list-item { 
-            background: white; 
-            padding: 20px; 
-            border-radius: 25px; 
-            margin-bottom: 15px; 
-            display: flex; 
-            align-items: center; 
-            gap: 20px; 
-            border: 1px solid #eee; 
-            transition: 0.3s; 
-            text-decoration: none; 
-            color: inherit;
-        }
-        .list-item:hover { background: #f0f4f0; transform: translateX(5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        
-        /* Image Styling */
-        .list-img { 
-            width: 90px; 
-            height: 90px; 
-            border-radius: 20px; 
-            object-fit: cover; 
-            background: #f0f0f0;
-        }
-
-        .content-info h4 { font-weight: 800; font-size: 18px; color: #2D3748; }
-        .content-info p { font-size: 13px; color: #718096; margin-top: 4px; }
-
-        /* Kalori Badge */
-        .kalori-badge { 
-            background: #FFF9E6; 
-            color: #D97706; 
-            padding: 5px 12px; 
-            border-radius: 10px; 
-            font-size: 12px; 
-            font-weight: 800; 
-            display: inline-block; 
-            margin-top: 10px; 
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-riwayat">
     <?php include 'navbar.php'; ?>
     
     <div class="container">

@@ -38,23 +38,13 @@ foreach ($kemungkinan_folder as $folder) {
     <title>Detail Menu - MBG</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { --primary: #4A5D23; --bg: #F0F4F0; }
-        body { background: var(--bg); display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; font-family: 'Plus Jakarta Sans', sans-serif;}
-        .card-detail { background: white; width: 100%; max-width: 950px; border-radius: 40px; display: flex; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
-        .img-section { width: 45%; background: #e2e8f0; position: relative; }
-        .img-section img { width: 100%; height: 100%; object-fit: cover; }
-        .content-section { width: 55%; padding: 50px; }
-        .back-btn { position: absolute; top: 25px; left: 25px; background: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; text-decoration: none; z-index: 10; }
-        .gizi-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 2px solid #F7FAFC; font-weight: 700; color: #4A5568; }
-        .energy-box { background: var(--primary); color: white; padding: 15px 25px; border-radius: 20px; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-detail-gizi">
 
 <div class="card-detail">
     <div class="img-section">
-        <a href="riwayat.php" class="back-btn"><i class="fas fa-chevron-left"></i></a>
+        <a href="riwayat.php" class="back-btn-circle"><i class="fas fa-chevron-left"></i></a>
         <img src="<?= $path_final ?>">
     </div>
 
