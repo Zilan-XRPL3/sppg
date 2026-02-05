@@ -7,12 +7,17 @@ if (!function_exists('active')) {
     }
 }
 ?>
-<header style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); padding: 20px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #f0f0f0;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 25px; display: flex; justify-content: space-between; align-items: center;">
-        <a href="index.php" style="font-weight: 800; font-size: 24px; color: #4A5D23; text-decoration: none; display: flex; align-items: center; gap: 10px;">
+<header class="navbar-header">
+    <div class="navbar-inner">
+        <a href="index.php" class="navbar-brand">
             <i class="fas fa-leaf"></i> MBG App
         </a>
-        <ul style="display: flex; gap: 8px; list-style: none; background: #F1F5F1; padding: 6px; border-radius: 20px;">
+        
+        <div class="navbar-toggle" onclick="document.querySelector('.navbar-menu').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="navbar-menu">
             <li class="nav-item"><a href="index.php" class="<?php active('index.php'); ?>">Beranda</a></li>
             <li class="nav-item"><a href="menu.php" class="<?php active('menu.php'); ?>">Menu Harian</a></li>
             <li class="nav-item"><a href="riwayat.php" class="<?php active('riwayat.php'); ?>">Riwayat</a></li>
@@ -21,8 +26,3 @@ if (!function_exists('active')) {
         </ul>
     </div>
 </header>
-
-<style>
-    .nav-item a { text-decoration: none; padding: 10px 20px; color: #64748B; font-weight: 700; font-size: 14px; border-radius: 15px; transition: 0.3s; display: block; }
-    .nav-item a.active, .nav-item a:hover { background: white; color: #4A5D23; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-</style>
