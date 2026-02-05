@@ -35,7 +35,7 @@ if (isset($_POST['submit_tanggapan'])) {
     <style>
         :root { --bg: #F6F0D7; --olive: #89986D; --white: #FFF; --sage: #9CAB84; }
         body { background: var(--bg); font-family: 'Nunito', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .container { background: white; width: 500px; padding: 40px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .container { background: white; width: 100%; max-width: 500px; padding: 40px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
         h2 { color: var(--olive); font-weight: 800; text-align: center; }
         .detail-box { background: #f9fdf4; padding: 20px; border-radius: 15px; border-left: 5px solid var(--sage); margin: 20px 0; }
         label { font-weight: 700; color: var(--olive); display: block; margin-bottom: 8px; }

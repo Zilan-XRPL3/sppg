@@ -99,9 +99,36 @@ $query = mysqli_query($conn, "SELECT * FROM pengaduan WHERE status = 'selesai' O
             font-weight: 700; border: 1px solid #D1FAE5; transition: 0.3s;
         }
         .btn-view:hover { background: var(--success); color: white; }
+        .btn-view:hover { background: var(--success); color: white; }
+        
+        @media (max-width: 768px) {
+            .sidebar { 
+                display: flex; transform: translateX(-110%); 
+                transition: transform 0.3s ease-in-out;
+                box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+            }
+            .sidebar.active { transform: translateX(0); }
+            
+            .main { margin-left: 0; width: 100%; padding: 20px; padding-top: 80px; }
+            .grid { grid-template-columns: 1fr; }
+            
+            /* Mobile Toggle Button */
+            .mobile-toggle { 
+                display: flex !important; 
+                position: fixed; top: 20px; right: 20px; z-index: 1001; 
+                background: var(--dark); color: white; width: 45px; height: 45px; 
+                border-radius: 12px; align-items: center; justify-content: center; 
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 20px; cursor: pointer;
+            }
+        }
+        .mobile-toggle { display: none; }
     </style>
 </head>
 <body>
+    <!-- Mobile Toggle Button -->
+    <div class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+    </div>
     <div class="sidebar">
         <div class="sidebar-logo">
             <div class="logo-box"><i class="fas fa-leaf"></i></div>

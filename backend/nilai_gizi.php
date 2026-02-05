@@ -158,9 +158,34 @@ $result = mysqli_query($conn, $query);
         input[type="number"]:focus { border-color: var(--primary); background: white; }
         .btn-save-final { width: 100%; background: var(--dark-olive); color: white; border: none; padding: 16px; border-radius: 18px; font-weight: 700; margin-top: 25px; cursor: pointer; transition: 0.3s; }
         .btn-save-final:hover { background: var(--primary); transform: translateY(-3px); }
+        @media (max-width: 768px) {
+            .sidebar { 
+                display: flex; transform: translateX(-110%); 
+                transition: transform 0.3s ease-in-out;
+                box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+            }
+            .sidebar.active { transform: translateX(0); }
+            
+            .main { margin-left: 0; width: 100%; padding: 20px; padding-top: 80px; }
+            
+            /* Mobile Toggle Button */
+            .mobile-toggle { 
+                display: flex !important; 
+                position: fixed; top: 20px; right: 20px; z-index: 1001; 
+                background: var(--dark-olive); color: white; width: 45px; height: 45px; 
+                border-radius: 12px; align-items: center; justify-content: center; 
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 20px; cursor: pointer;
+            }
+        }
+        .mobile-toggle { display: none; }
     </style>
 </head>
 <body>
+
+    <!-- Mobile Toggle Button -->
+    <div class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+    </div>
 
     <div class="sidebar">
         <div class="sidebar-logo">
